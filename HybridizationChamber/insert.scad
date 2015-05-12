@@ -20,8 +20,14 @@ module insert(){
                 translate([0,0,-1])cylinder(r=15.0, h=7, $fn=500);
             }
             union(){
-                translate([17.5,0,-1])  cylinder(r=0.5, h=7, $fn=500);
-                translate([-17.5,0,-1])cylinder(r=0.5, h=7, $fn=500);
+                translate([17.5,0,-1])union(){
+                    cylinder(r=0.5, h=7, $fn=500);
+                    translate([0,0,2])cylinder(r=1.0,h=3,$fn=500);
+                }
+                translate([-17.5,0,-1])union(){
+                    cylinder(r=0.5, h=7, $fn=500);
+                    translate([0,0,2])cylinder(r=1.0,h=3,$fn=500);
+                }
             }
         }
         translate([0,0,-1.5])cylinder(r=20.0, h=2, $fn=1000);
