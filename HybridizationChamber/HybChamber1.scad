@@ -16,11 +16,11 @@ difference(){
     difference(){
         //Create threaded sidewall with grip
         union(){
-            translate([0,0,1])metric_thread(42.0, 1, 5);
-            translate([-22.5, -22.5, 0])cube(size=[45, 45, 1]);
+            translate([0,0,1.5])metric_thread(46.0, 1, 5.5);
+            translate([-24, -24, 0])cube(size=[48, 48, 2]);
         }
-        translate([0,0,2])cylinder(r=20.25, h=5,$fn=500);
+        translate([0,0,2])cylinder(r=21.5, h=10,$fn=500);
     }
     //Clearance hole
-    translate([0,0,-1])cylinder(r=14.5, h=5);
+    translate([0,0,-3])cylinder(r=14.5, h=10);
 }
