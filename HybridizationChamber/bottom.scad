@@ -1,4 +1,4 @@
-//Simple Hybridization and Wash Chamber
+//Simple Hybridization and Wash Chamber: Bottom
 //Jeffrey Moffitt
 //jeffmoffitt@gmail.com
 //May 11, 2015
