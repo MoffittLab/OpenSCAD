@@ -9,20 +9,24 @@ include <..\OpenSCADModules\threads.scad>
 
 //Units are mm
 
-//Subtract central hole
-difference(){
-    //Create inner cylinder
-    union(){
+//Define module
+module top(){
+    //Subtract central hole
+    difference(){
+        //Create inner cylinder
+        union(){
 
-        translate([0,0,1])cylinder(r=21.0, h=5, $fn=500);
-        // Create outer threaded cylinder
-        difference(){
-            cylinder(r=25, h=6, $fn=10);
-            translate([0,0,-1])metric_thread(46.0,1,5, inner=true);
+            translate([0,0,1])cylinder(r=21.0, h=5, $fn=500);
+            // Create outer threaded cylinder
+            difference(){
+                cylinder(r=25, h=6, $fn=10);
+                translate([0,0,-1])metric_thread(46.0,1,5, inner=true);
+            }
         }
+        translate([0,0,-1])cylinder(r=19.0, h=10, $fn=500);
     }
-    translate([0,0,-1])cylinder(r=19.0, h=10, $fn=500);
 }
+//top();
 //Subtract central hole
 //difference(){
     

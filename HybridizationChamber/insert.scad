@@ -8,23 +8,23 @@
 include <..\OpenSCADModules\threads.scad>
 
 //Units are mm
-
-//Subtract central hole
-
-//Add recess
-difference(){
-    //Add fluidics holds
+//Define module
+module insert(){
+    //Add recess
     difference(){
-        //Create insert
+        //Add fluidics holds
         difference(){
-            cylinder(r=21, h=3,$fn=500);
-            translate([0,0,-1])cylinder(r=15.0, h=7, $fn=500);
+            //Create insert
+            difference(){
+                cylinder(r=21, h=3,$fn=500);
+                translate([0,0,-1])cylinder(r=15.0, h=7, $fn=500);
+            }
+            union(){
+                translate([17.5,0,-1])  cylinder(r=0.5, h=7, $fn=500);
+                translate([-17.5,0,-1])cylinder(r=0.5, h=7, $fn=500);
+            }
         }
-        union(){
-            translate([17.5,0,-1])  cylinder(r=0.5, h=7, $fn=500);
-            translate([-17.5,0,-1])cylinder(r=0.5, h=7, $fn=500);
-        }
+        translate([0,0,-1.5])cylinder(r=20.0, h=2, $fn=1000);
     }
-    translate([0,0,-1.5])cylinder(r=20.0, h=2, $fn=1000);
 }
-        
+//insert();
