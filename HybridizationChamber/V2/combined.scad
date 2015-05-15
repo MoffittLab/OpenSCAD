@@ -11,7 +11,7 @@ translate([0,0,0])rotate([0,180,0])insert();
 translate([0,0,-40])bottom();
 
 
-// Assembled View with Cross Section
+//Assembled View with Cross Section
 //rotate([0,0,90])union(){
 //    difference(){
 //            translate([0,0,4.2])color("Plum")top();
