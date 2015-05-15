@@ -3,7 +3,7 @@
 // jeffmoffitt@gmail.com
 // May 14, 2015
 
-//Add gripping point
+//Add gripping points
 union(){
     //Add upper supports
     union(){
