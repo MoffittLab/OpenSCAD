@@ -37,7 +37,7 @@ module top(){
                     difference(){
                         //Cut away central volume
                         difference(){
-                            translate([0,0,0])cube(size=[27,50,23], center=true);
+                            translate([0,0,0])cube(size=[27,52,23], center=true);
                             translate([0,0,3])cube(size=[28,42,23], center=true);
                         }
                     translate([0,0,-2])cube(size=[21,42,23], center=true);
@@ -49,10 +49,10 @@ module top(){
         }
         for(pos=[6.25:12:18.75]){
                 for(theta=[0:180:180]){
-                translate([pos,0,0])rotate([0,0,theta])translate([0,-24.5,-15.25+7.5]){
+                translate([pos,0,0])rotate([0,0,theta])translate([0,-25,-15.25+7.5]){
                     union(){
-                        cube(size=[5,1,30.5], center=true);
-                        translate([0,.25,15.75])cube(size=[5,1.5,1], center=true);
+                        cube(size=[5,2,30.5], center=true);
+                        translate([0,.25,15.75])cube(size=[5,2.5,1], center=true);
                     }
                 }
             }

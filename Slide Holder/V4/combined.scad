@@ -5,8 +5,8 @@
 //CC BY NC SA
 include <top.scad>
 include <bottom.scad>
-translate([0,-25,0])top();
-translate([0,25,0])bottom();
+translate([0,-27,0])top();
+translate([0,27,0])bottom();
 
 
 //Assembled View with Cross Section
