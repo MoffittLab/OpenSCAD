@@ -33,8 +33,8 @@ module bottom(){
                         }
                         translate([-1, -40, 0])cube(size=([46,80,40]));
                     }
-                    for (pos=[4:5:40]){
-                        translate([pos, 0, 0])rotate([0,90,0])cylinder(h=1, r=24.5, $fn=500);
+                    for (pos=[4:6.7:40]){
+                        translate([pos, 0, 0])rotate([0,90,0])cylinder(h=2, r=24.5, $fn=500);
                     }
                 }
                 translate([22,0,-11.5])difference(){
