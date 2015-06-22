@@ -45,11 +45,11 @@ module top(){
                                 //Fuse top and bottom plate
                                 union(){
                                     cylinder(r=30.0, h=6.0, $fn=500);
-                                    translate([0,0,-6])cylinder(r=21.0, h=6.0, $fn=500);
+                                    translate([0,0,-6])cylinder(r=21.5, h=6.0, $fn=500);
                                 }
                                 translate([0,0,-7])cylinder(r=13.0, h=14, $fn=500);
                             }
-                            translate([0,0,-6.25])cylinder(r=20.0, h=1.5, $fn=500);//1.25 mm
+                            translate([0,0,-6.25])cylinder(r=20.5, h=1.5, $fn=500);//1.25 mm
                         }
                         for (pos=[-17.5:35:17.5]){
                             translate([pos,0,-7])cylinder(r=0.5, h=14, $fn=500);
