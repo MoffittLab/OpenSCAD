@@ -20,14 +20,14 @@ module bottom(){
             translate([0,0,6])cylinder(r=22.0, h=6, $fn=500);
             // Create outer threaded cylinder
             difference(){
-                cylinder(r=28, h=12, $fn=10);
-                translate([0,0,-1])metric_thread(50,3,10, inner=true);
+                translate([0,0,-1])cylinder(r=28,h=13, $fn=10);
+                translate([0,0,-1.1])metric_thread(50,3,10.1, inner=true);
             }
         }
         translate([0,0,-1])cylinder(r=13.0, h=14, $fn=500);
     }
 }
-//bottom();
+bottom();
 
 module cutbottom(){
     difference(){
