@@ -20,7 +20,7 @@ module insert(){
         }
     }
 }
-//insert();
+insert();
 
 module insert_norecess(){
     //Create alignment notches
