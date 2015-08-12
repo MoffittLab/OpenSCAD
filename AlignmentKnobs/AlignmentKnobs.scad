@@ -10,6 +10,6 @@ union(){
         translate([0, 0, -3])cylinder(r=6, h=3, $fn=8);
     }
     //translate([0, 0, 3])cylinder(r=0.4, h=5, $fn=100);
-    translate([0, 0, 3])cylinder(r=0.4, h=6, $fn=100);
-
+    //translate([0, 0, 3])cylinder(r=0.4, h=6, $fn=100);
+    translate([0, 0, 3])cylinder(r=0.4, h=7, $fn=100);
 }
