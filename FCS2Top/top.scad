@@ -56,7 +56,7 @@ module top(){
                         }
                     }
                     for (pos=[-17.5:35:17.5]){
-                        translate([pos, 0, 3])english_thread(diameter = (1/4+1/128), threads_per_inch = 28, length = 1/8, inner=true);
+                        translate([pos, 0, 3])english_thread(diameter = (1/4+1/128), threads_per_inch = 28, length = 1/2, inner=true);
                     }
                 }
                 rotate([0,0,-10])translate([0,0,-.5])notches();
@@ -75,7 +75,9 @@ module top(){
 top();
 //notches();
 
-
+//for (pos=[-17.5:35:17.5]){
+//                          translate([pos, 0, 3])cylinder(r=3/16*25.4, h=10, $fn=500);
+//                        }
 
 
 
