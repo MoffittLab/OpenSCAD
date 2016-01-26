@@ -81,5 +81,5 @@ module tweezers(){
         translate([0, 30, 47.25])rotate([0,90,0])cylinder(r=1, h=10, $fn=500);
     }
 }
-translate([17.5, -30,-7.5])tweezers();
+//translate([17.5, -30,-7.5])tweezers();
 
