@@ -1,7 +1,7 @@
-// Wash Chamber V2
+// Wash Chamber V3
 // Jeffery Moffitt
 // jeffmoffitt@gmail.com
-// December 22, 2015//Modified January 26, 2016
+// December 22, 2015//Modified January 26, 2016//Modified February 11, 2016
 include <../../OpenSCADModules/drawtext.scad>
 
 module catch() {
@@ -12,20 +12,20 @@ module catch() {
 
 module case() {
     difference(){
-        translate([0,0,0])cube(size=([50, 59, 45])); //Outside box 99
-        translate([3,3,3])cube(size=([44, 53, 43])); // Inside 93
+        translate([0,0,0])cube(size=([49, 59, 45])); //Outside box 99
+        translate([3,3,3])cube(size=([43, 53, 43])); // Inside 93
     }
     //Add ribs
     for (pos=[3:5:54]){
         union(){
-            translate([0, pos, 0])cube(size=([6,3,43]));
-            translate([44, pos, 0])cube(size=([6,3,43]));
+            translate([0, pos, 0])cube(size=([7,3,43]));
+            translate([42, pos, 0])cube(size=([7,3,43]));
         }
     }
    //Add lid holder and symmetry breaking mark
-    translate([48/2-9/2,59,42*3/4-3/2])catch();
+    translate([49/2-9/2,59,42*3/4-3/2])catch();
     translate([0,59/2-9/2,42*3/4-3/2])rotate([0,0,90])catch();
-    translate([53,59/2-9/2,42*3/4-3/2])rotate([0,0,90])catch();
+    translate([52,59/2-9/2,42*3/4-3/2])rotate([0,0,90])catch();
 }
 //case();
 
