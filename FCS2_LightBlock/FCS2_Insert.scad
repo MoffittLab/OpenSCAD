@@ -1,7 +1,7 @@
-// Alternative FCS2 Top
+// FCS2 Light Block Insert
 // Jeffery Moffitt
-// jeffmoffitt@gmail.com
-// June 13, 2015
+// jeffrey.moffitt@childrens.harvard.edu
+// July 11, 2020
 include <..\OpenSCADModules\threads.scad>
 include <..\OpenSCADModules\drawtext.scad>
 
@@ -115,10 +115,10 @@ module block4(){
 
 
 //color("Green")top();
-translate([0,0,7.5])block1();
+//translate([0,0,7.5])block1();
 //translate([0,0,7.5])block2();
 //translate([0,0,7.5])block3();
-//translate([0,0,7.5])block4();
+translate([0,0,7.5])block4();
 //notches();
 
 //for (pos=[-17.5:35:17.5]){
