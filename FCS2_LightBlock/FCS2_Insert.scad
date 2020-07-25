@@ -87,9 +87,9 @@ module block2(){
     difference(){
         union(){
             cylinder(r1=12, r2=12.5, h=1.5, $fn=500); // Main block
-            translate([0,0,5])rotate([0,-90,0])cylinder(r=5, h=2, $fn=5);
+            translate([0,0,4.5])rotate([0,-90,0])cylinder(r=5, h=2, $fn=5);
         }
-        rotate([0,0,90])translate([-1,5,1])scale([0.5, 0.5, 1])drawtext("2");
+        //rotate([0,0,90])translate([-3,3,1])scale([1, 1, 1])drawtext("2");
     }
 }
 
@@ -97,9 +97,9 @@ module block3(){
     difference(){
         union(){
             cylinder(r1=13, r2=13.5, h=1.5, $fn=500); // Main block
-            translate([0,0,5])rotate([0,-90,0])cylinder(r=5, h=2, $fn=5);
+            translate([0,0,4.5])rotate([0,-90,0])cylinder(r=5, h=2, $fn=5);
         }
-        rotate([0,0,90])translate([-1,5,1])scale([0.5, 0.5, 1])drawtext("3");
+        //rotate([0,0,90])translate([-3,3,1])scale([1, 1, 1])drawtext("3");
     }
 }
 
@@ -116,9 +116,9 @@ module block4(){
 
 //color("Green")top();
 //translate([0,0,7.5])block1();
-//translate([0,0,7.5])block2();
+translate([0,0,7.5])block2();
 //translate([0,0,7.5])block3();
-translate([0,0,7.5])block4();
+//translate([0,0,7.5])block4();
 //notches();
 
 //for (pos=[-17.5:35:17.5]){

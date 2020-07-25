@@ -48,7 +48,7 @@ module top(){
                                     cylinder(r=30.0, h=6.0, $fn=500);
                                     translate([0,0,-6])cylinder(r=21.5, h=6.0, $fn=500);
                                 }
-                                translate([0,0,-7])cylinder(r=13.0, h=14, $fn=500);
+                                translate([0,0,-7])cylinder(r=31.9/2, h=14, $fn=500); // Updated from 13 mm to match actual FCS2 measurements
                             }
                             translate([0,0,-6.25])cylinder(r=20.5, h=1.5, $fn=500);//1.25 mm
                         }
@@ -130,11 +130,58 @@ module block8(){
 }
 
 
+module block10(){
+    difference(){
+        union(){
+            translate([0,0,3])cylinder(r=18,h=1.5, $fn=500);
+            difference(){
+                cylinder(r1=30.9/2, r2=31.9/2, h=3, $fn=500); // Main block
+                translate([0,0,-0.5])cylinder(r=14, h=3, $fn=500);
+            }
+            translate([0,0,7.5])rotate([0,-90,0])cylinder(r=5, h=2, $fn=5);
+        }
+        rotate([0,0,90])translate([-5,5,4])drawtext("10");
+    }
+}
+
+module block11(){
+    difference(){
+        union(){
+            translate([0,0,3])cylinder(r=18,h=1.5, $fn=500);
+            difference(){
+                cylinder(r1=31/2, r2=32.0/2, h=3, $fn=500); // Main block
+                translate([0,0,-0.5])cylinder(r=14, h=3, $fn=500);
+            }
+            translate([0,0,7.5])rotate([0,-90,0])cylinder(r=5, h=2, $fn=5);
+        }
+        rotate([0,0,90])translate([-5,5,4])drawtext("11");
+    }
+}
+
+module block12(){
+    difference(){
+        union(){
+            translate([0,0,3])cylinder(r=18,h=1.5, $fn=500);
+            difference(){
+                cylinder(r1=31.5/2, r2=32.5/2, h=3, $fn=500); // Main block
+                translate([0,0,-0.5])cylinder(r=14, h=3, $fn=500);
+            }
+            translate([0,0,7.5])rotate([0,-90,0])cylinder(r=5, h=2, $fn=5);
+        }
+        rotate([0,0,90])translate([-6,5,4])drawtext("12");
+    }
+}
+
+
 //color("Green")top();
 //translate([0,0,7.5])block5();
 //translate([0,0,7.5])block6();
 //translate([0,0,7.5])block7();
-translate([0,0,7.5])block8();
+//translate([0,0,7.5])block8();
+//translate([0,0,7.5])block10();
+//translate([0,0,7.5])block11();
+translate([0,0,7.5])block12();
+
 //notches();
 
 //for (pos=[-17.5:35:17.5]){
